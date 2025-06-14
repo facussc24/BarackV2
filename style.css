@@ -1,0 +1,26 @@
+#loading { display: none; }
+
+.table-container {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+thead {
+  background: #f0f0f0;
+  position: sticky;
+  top: 0;
+}
+
+tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+td, th {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
