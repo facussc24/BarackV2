@@ -124,3 +124,36 @@ body.cover {
 .cover-container p {
   margin: 0.3em 0;
 }
+
+/* FMEA cover table */
+.fmea-title {
+  background: var(--header-bg);
+  color: var(--header-color);
+  text-align: center;
+  padding: 10px;
+  margin: 0 0 20px 0;
+}
+
+table.sheet {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+}
+
+table.sheet th,
+table.sheet td {
+  border: 1px solid var(--border-color);
+  padding: 8px;
+  vertical-align: top;
+}
+
+table.sheet th {
+  background: #f7f7f7;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+table.sheet td {
+  white-space: pre-wrap;
+}
