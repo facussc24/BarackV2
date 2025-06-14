@@ -17,7 +17,12 @@ const dataService = {
         const parsed = JSON.parse(data) || [];
         resolve(parsed);
       } catch (e) {
-        resolve([]);
+        if (e instanceof SyntaxError && DEFAULT_DATA[key]) {
+          localStorage.setItem(key, JSON.stringify(DEFAULT_DATA[key]));
+          resolve(DEFAULT_DATA[key]);
+        } else {
+          resolve([]);
+        }
       }
     });
   }
