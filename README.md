@@ -1,6 +1,7 @@
 # BarackV2
 
 Esta versión incluye una vista sencilla de AMFE.
+También se incluye `cover.html`, que es la carátula del AMFE y puede abrirse directamente o mediante el enlace disponible en `index.html`.
 
 ## Uso
 
