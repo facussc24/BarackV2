@@ -174,3 +174,15 @@ table.sheet th {
 table.sheet td {
   white-space: pre-wrap;
 }
+
+/* AMFE page full width */
+body.amfe-page {
+  margin: 0;
+}
+
+body.amfe-page .table-container {
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
