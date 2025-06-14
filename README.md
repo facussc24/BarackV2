@@ -4,7 +4,7 @@ Esta versión incluye una vista sencilla de AMFE.
 
 ## Uso
 
-1. Abre `amfe.html` en un navegador.
+1. Abre `index.html` (o `amfe.html`) en un navegador.
 2. La página leerá los datos almacenados en `localStorage` bajo la clave `amfe`.
 3. Se mostrará un spinner mientras se cargan los datos.
 4. La tabla resultante es solo de lectura y puede refrescarse con el botón **Refrescar**.
