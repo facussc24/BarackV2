@@ -98,9 +98,10 @@ h1 {
 
 /* Cover page styles */
 body.cover {
-  background: #ffffff;
+  background: #f0f2f5;
   color: #44546A;
   margin: 0;
+  padding: 40px 20px;
 }
 
 .cover-container {
@@ -124,14 +125,21 @@ body.cover {
 .cover-container p {
   margin: 0.3em 0;
 }
+.cover-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
 /* FMEA cover table */
 .fmea-title {
   background: var(--header-bg);
   color: var(--header-color);
   text-align: center;
-  padding: 10px;
+  padding: 12px;
   margin: 0 0 20px 0;
+  font-size: 1.8em;
+  letter-spacing: 0.05em;
 }
 
 table.sheet {
@@ -139,19 +147,23 @@ table.sheet {
   border-collapse: collapse;
   margin-bottom: 20px;
   font-family: Arial, sans-serif;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  background: #fff;
 }
 
 table.sheet th,
 table.sheet td {
   border: 1px solid var(--border-color);
-  padding: 8px;
+  padding: 10px 12px;
   vertical-align: top;
 }
 
 table.sheet th {
-  background: #f7f7f7;
+  background: #f0f4f8;
   text-transform: uppercase;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 table.sheet td {
