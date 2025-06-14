@@ -1,4 +1,5 @@
 let amfeRows = [];
+let visibleRows = [];
 
 function renderSimpleTable(containerId, rows) {
   const container = document.getElementById(containerId);
@@ -33,6 +34,7 @@ function renderSimpleTable(containerId, rows) {
 }
 
 function renderAMFE(rows) {
+  visibleRows = rows;
   renderSimpleTable('amfe', rows);
 }
 
@@ -48,6 +50,25 @@ function filterAMFE(query) {
   renderAMFE(filtered);
 }
 
+function exportCSV() {
+  if (!visibleRows.length) return;
+  const headers = Object.keys(visibleRows[0]);
+  const lines = [headers.join(',')];
+  visibleRows.forEach(r => {
+    const line = headers
+      .map(h => '"' + String(r[h]).replace(/"/g, '""') + '"')
+      .join(',');
+    lines.push(line);
+  });
+  const blob = new Blob([lines.join('\n')], { type: 'text/csv' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'amfe.csv';
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
 function loadData() {
   document.getElementById('loading').style.display = 'block';
   dataService.getAll('amfe').then(rows => {
@@ -61,6 +82,10 @@ function loadData() {
 
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('refresh').addEventListener('click', loadData);
+  const exportBtn = document.getElementById('export');
+  if (exportBtn) {
+    exportBtn.addEventListener('click', exportCSV);
+  }
   const filterInput = document.getElementById('filter');
   if (filterInput) {
     filterInput.addEventListener('input', e => filterAMFE(e.target.value));
