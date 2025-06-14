@@ -6,14 +6,31 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>AMFE</h1>
-<a href="cover.html" class="cover-link">Ver carátula</a>
-<button id="refresh">Refrescar</button>
-<button id="export">Exportar CSV</button>
-<input type="text" id="filter" placeholder="Filtrar..." aria-label="Filtrar">
-<div id="loading" role="status" aria-live="polite">Cargando...</div>
-<div id="amfe" class="table-container"></div>
-<script src="js/dataService.js"></script>
-<script src="js/views/amfe.js"></script>
+  <div class="cover-container">
+    <h1>AMFE de proceso general</h1>
+    <p><strong>Nombre de la organización:</strong> Brack</p>
+    <p><strong>Localización de la planta:</strong> Planta Hurlingham</p>
+    <p><strong>Tema:</strong> AMFE general</p>
+    <p><strong>Fecha de creación:</strong> 14/06/2025</p>
+    <p><strong>Fecha de revisión:</strong> </p>
+    <p><strong>Responsable del diseño:</strong> Facundo Santoro</p>
+    <p><strong>Nivel de confidencialidad:</strong> </p>
+    <div class="section">
+      <h2>Equipo multifuncional</h2>
+      <p>Paulo Centurión – Ingeniería</p>
+      <p>Marcelo Nieve – Calidad</p>
+      <p>Cristina Rabago – Seguridad e higiene</p>
+      <p>Leonardo Lattanzi – Producción</p>
+    </div>
+  </div>
+
+  <h2>AMFE</h2>
+  <button id="refresh">Refrescar</button>
+  <button id="export">Exportar CSV</button>
+  <input type="text" id="filter" placeholder="Filtrar..." aria-label="Filtrar">
+  <div id="loading" role="status" aria-live="polite">Cargando...</div>
+  <div id="amfe" class="table-container"></div>
+  <script src="js/dataService.js"></script>
+  <script src="js/views/amfe.js"></script>
 </body>
 </html>
