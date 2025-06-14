@@ -102,6 +102,10 @@ body.cover {
   color: #44546A;
   margin: 0;
   padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 .cover-container {
@@ -126,9 +130,9 @@ body.cover {
   margin: 0.3em 0;
 }
 .cover-page {
-  max-width: 900px;
-  margin: 0 auto;
+  width: 100%;
   padding: 20px;
+  box-sizing: border-box;
 }
 
 /* FMEA cover table */
@@ -136,9 +140,9 @@ body.cover {
   background: var(--header-bg);
   color: var(--header-color);
   text-align: center;
-  padding: 12px;
+  padding: 16px;
   margin: 0 0 20px 0;
-  font-size: 1.8em;
+  font-size: 2.2em;
   letter-spacing: 0.05em;
 }
 
@@ -156,8 +160,9 @@ table.sheet {
 table.sheet th,
 table.sheet td {
   border: 1px solid var(--border-color);
-  padding: 10px 12px;
+  padding: 14px 16px;
   vertical-align: top;
+  font-size: 1.1em;
 }
 
 table.sheet th {
